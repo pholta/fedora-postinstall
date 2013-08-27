@@ -31,3 +31,7 @@ yum install google-chrome-stable -y
 
 # Graphical stuff - Gimp (photo editor), Hugin (panoramic tool)
 yum install gimp hugin -y
+
+# Gnome Tweak tool to customize advanced GNOME 3 options
+yum gnome-tweak-tool -y
+
