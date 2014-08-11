@@ -35,3 +35,7 @@ yum install gimp hugin -y
 # Gnome Tweak tool to customize advanced GNOME 3 options
 yum gnome-tweak-tool -y
 
+#install Darktable from the standard repository
+yum install darktable -y
+
+
