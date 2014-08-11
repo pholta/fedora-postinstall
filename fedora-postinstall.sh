@@ -38,4 +38,5 @@ yum gnome-tweak-tool -y
 #install Darktable from the standard repository
 yum install darktable -y
 
-
+#Steam for gaming
+yum install steam -y
