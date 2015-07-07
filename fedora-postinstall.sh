@@ -1,42 +1,35 @@
 #!/bin/bash
 
-# Post-install script - Fedora 19
+# Post-install script - Fedora 22+
+# run this script as root just after you freshly installed the system
 
-# RPM Fusion repository
-yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
+# first, updating the system
+dnf update
+
+# RPM Fusion repository - universal based on the distro version.. 
+dnf install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
 
 # Audio Video codecs + VLC
-yum install gstreamer-plugins-{good,bad,ugly} gstreamer-ffmpeg ffmpeg vlc gstreamer1-plugins-ugly gstreamer1-libav -y ;
-
-# Libre Office
-yum install libreoffice-{writer,calc,impress} -y;
+dnf install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer-ffmpeg gstreamer1-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer-plugins-base-tools gstreamer1-plugins-good-extras gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-good gstreamer1-plugins-base gstreamer1 vlc -y
 
 # Google Chrome stable
 # Enable Google YUM repository
 touch /etc/yum.repos.d/google-chrome.repo
 echo "
 [google-chrome]
-name=google-chrome - 32-bit
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/i386
-enabled=1
-gpgcheck=1
-gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
-
-name=google-chrome - 64-bit
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
+name=google-chrome
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
 enabled=1
 gpgcheck=1
 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub" >> /etc/yum.repos.d/google-chrome.repo
-yum install google-chrome-stable -y
+dnf install google-chrome-stable -y
 
-# Graphical stuff - Gimp (photo editor), Hugin (panoramic tool)
-yum install gimp hugin -y
+# Graphical stuff - Gimp (photo editor), Hugin (panoramic tool), Darktable (raw files processor)
+dnf install gimp hugin darktable -y
 
 # Gnome Tweak tool to customize advanced GNOME 3 options
-yum gnome-tweak-tool -y
-
-#install Darktable from the standard repository
-yum install darktable -y
+dnf install gnome-tweak-tool -y
 
 #Steam for gaming
-yum install steam -y
+dnf config-manager --add-repo=http://negativo17.org/repos/fedora-steam.repo
+dnf install steam -y
