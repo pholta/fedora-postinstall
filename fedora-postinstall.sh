@@ -14,14 +14,15 @@ dnf install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-pl
 
 # Google Chrome stable
 # Enable Google YUM repository
-touch /etc/yum.repos.d/google-chrome.repo
-echo "
+cat << EOF > /etc/yum.repos.d/google-chrome.repo
 [google-chrome]
-name=google-chrome
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+name=google-chrome - \$basearch
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/\$basearch
 enabled=1
 gpgcheck=1
-gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub" >> /etc/yum.repos.d/google-chrome.repo
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+EOF
+
 dnf install google-chrome-stable -y
 
 # Graphical stuff - Gimp (photo editor), Hugin (panoramic tool), Darktable (raw files processor)
