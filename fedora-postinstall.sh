@@ -12,6 +12,9 @@ dnf install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-fr
 # Audio Video codecs + VLC
 dnf install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer-ffmpeg gstreamer1-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer-plugins-base-tools gstreamer1-plugins-good-extras gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-good gstreamer1-plugins-base gstreamer1 vlc -y
 
+# Libre office + Czech
+dnf install libreoffice libreoffice-langpack-cs -y
+
 # Google Chrome stable
 # Enable Google YUM repository
 cat << EOF > /etc/yum.repos.d/google-chrome.repo
