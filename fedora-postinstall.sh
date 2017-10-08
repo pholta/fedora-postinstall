@@ -38,6 +38,15 @@ dnf install gnome-tweak-tool -y
 dnf config-manager --add-repo=http://negativo17.org/repos/fedora-steam.repo
 dnf install steam -y
 
-#adding all buttons - minimize,maximize,close in Gnome Shell
+#Gnome Shell Tweaks
+#adding all buttons - minimize,maximize,close
 gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+#show seconds
+gsettings set org.gnome.desktop.interface clock-show-seconds true
+#show date
+gsettings set org.gnome.desktop.interface clock-show-date true
+#show battery percentage
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+#show week number
+gsettings set org.gnome.desktop.calendar show-weekdate true
 
