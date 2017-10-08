@@ -37,3 +37,7 @@ dnf install gnome-tweak-tool -y
 #Steam for gaming
 dnf config-manager --add-repo=http://negativo17.org/repos/fedora-steam.repo
 dnf install steam -y
+
+#adding all buttons - minimize,maximize,close in Gnome Shell
+gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+
