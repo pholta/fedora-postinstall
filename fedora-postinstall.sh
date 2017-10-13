@@ -53,3 +53,6 @@ gsettings set org.gnome.desktop.interface show-battery-percentage true
 #show week number
 gsettings set org.gnome.desktop.calendar show-weekdate true
 
+#dropbox integration
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd
