@@ -31,6 +31,9 @@ sudo dnf install google-chrome-stable -y
 # Graphical stuff - Gimp (photo editor), Hugin (panoramic tool), Darktable (raw files processor)
 sudo dnf install gimp hugin darktable -y
 
+#dropbox integration
+sudo dnf install dropbox -y
+
 # Xchat - IRC client
 sudo dnf install xchat -y
 
@@ -52,7 +55,3 @@ gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 #show week number
 gsettings set org.gnome.desktop.calendar show-weekdate true
-
-#dropbox integration
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-~/.dropbox-dist/dropboxd
