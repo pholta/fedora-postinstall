@@ -1,6 +1,6 @@
-# Fedora Post-install script
+# Fedora Postinstall script
 
-This is a Fedora (22+) post-install Bash script, which I run just after a fresh installation of Fedora to install all my favourite SW and tweak the look of Gnome 
+This is a Fedora (22+) postinstall Bash script, which I run just after a fresh installation of Fedora to install all my favourite SW and tweak the look of Gnome 
 
 ## How to use the script
 Open your terminal and run: 
