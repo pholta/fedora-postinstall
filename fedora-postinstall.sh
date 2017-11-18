@@ -4,7 +4,7 @@
 # run this script as root just after you freshly installed the system
 
 # first, updating the system
-sudo dnf update
+sudo dnf update -y
 
 # RPM Fusion repository - universal based on the distro version.. 
 sudo dnf install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
