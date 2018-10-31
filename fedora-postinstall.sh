@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Post-install script - Fedora 22+
-# run this script as root just after you freshly installed the system
+# Post-install script - Fedora 29
+# I run this script just after a fresh install of Fedora
 
 # first, updating the system
 sudo dnf update -y
@@ -15,18 +15,18 @@ sudo dnf install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstream
 # Libre office + Czech
 sudo dnf install libreoffice libreoffice-langpack-cs -y
 
-# Google Chrome stable
-# Enable Google YUM repository
-sudo cat << EOF > /etc/yum.repos.d/google-chrome.repo
-[google-chrome]
-name=google-chrome
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
-enabled=1
-gpgcheck=1
-gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
-EOF
+# Third-party repositories 
+# Google Chrome, PyCharm, Steam
+sudo dnf install fedora-workstation-repositories -y
+sudo dnf config-manager --set-enabled  google-chrome  
+sudo dnf config-manager --set-enabled  rpmfusion-nonfree-nvidia-driver 
+sudo dnf config-manager --set-enabled  rpmfusion-nonfree-steam 
+sudo dnf install google-chrome -y
+sudo dnf install steam -y
 
-sudo dnf install google-chrome-stable -y
+#negativo17, Nvidia driver, CUDA tools and libraries
+sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
+sudo dnf -y install nvidia-driver nvidia-settings kernel-devel -y 
 
 # Graphical stuff - Gimp (photo editor), Hugin (panoramic tool), Darktable (raw files processor)
 sudo dnf install gimp hugin darktable -y
@@ -39,10 +39,6 @@ sudo dnf install xchat -y
 
 # Gnome Tweak tool to customize advanced GNOME 3 options
 sudo dnf install gnome-tweak-tool -y
-
-#Steam for gaming
-sudo dnf config-manager --add-repo=http://negativo17.org/repos/fedora-steam.repo
-sudo dnf install steam -y
 
 #Gnome Shell Tweaks
 #adding all buttons - minimize,maximize,close
