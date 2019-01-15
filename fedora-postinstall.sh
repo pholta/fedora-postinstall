@@ -19,7 +19,6 @@ sudo dnf install libreoffice libreoffice-langpack-cs -y
 # Google Chrome, PyCharm, Steam
 sudo dnf install fedora-workstation-repositories -y
 sudo dnf config-manager --set-enabled  google-chrome  
-sudo dnf config-manager --set-enabled  rpmfusion-nonfree-nvidia-driver 
 sudo dnf config-manager --set-enabled  rpmfusion-nonfree-steam 
 sudo dnf install google-chrome -y
 sudo dnf install steam -y
