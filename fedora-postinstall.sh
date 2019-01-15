@@ -24,10 +24,6 @@ sudo dnf config-manager --set-enabled  rpmfusion-nonfree-steam
 sudo dnf install google-chrome -y
 sudo dnf install steam -y
 
-#negativo17, Nvidia driver, CUDA tools and libraries
-sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
-sudo dnf -y install nvidia-driver nvidia-settings kernel-devel -y 
-
 # Graphical stuff - Gimp (photo editor), Hugin (panoramic tool), Darktable (raw files processor)
 sudo dnf install gimp hugin darktable -y
 
