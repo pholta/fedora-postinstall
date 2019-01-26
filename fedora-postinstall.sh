@@ -15,6 +15,9 @@ sudo dnf install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstream
 # Libre office + Czech
 sudo dnf install libreoffice libreoffice-langpack-cs -y
 
+# M$ compatibility
+sudo dnf install wine dosbox -y
+
 # networkin stuff, VPN
 sudo dnf install -y NetworkManager-openvpn NetworkManager-openvpn-gnome
 
