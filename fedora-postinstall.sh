@@ -35,9 +35,6 @@ sudo dnf install gimp hugin darktable -y
 #dropbox integration
 sudo dnf install dropbox -y
 
-# Xchat - IRC client
-sudo dnf install xchat -y
-
 # Gnome Tweak tool to customize advanced GNOME 3 options
 sudo dnf install gnome-tweak-tool -y
 
