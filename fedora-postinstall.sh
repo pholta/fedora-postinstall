@@ -26,7 +26,7 @@ sudo dnf install -y NetworkManager-openvpn NetworkManager-openvpn-gnome
 sudo dnf install fedora-workstation-repositories -y
 sudo dnf config-manager --set-enabled  google-chrome  
 sudo dnf config-manager --set-enabled  rpmfusion-nonfree-steam 
-sudo dnf install google-chrome -y
+sudo dnf install google-chrome-stable -y
 sudo dnf install steam -y
 
 # Graphical stuff - Gimp (photo editor), Hugin (panoramic tool), Darktable (raw files processor)
