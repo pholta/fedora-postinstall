@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Post-install script - Fedora 29
-# I run this script just after a fresh install of Fedora
+# Post-install script - Fedora 29+
+# run this script just after a fresh install of Fedora
 
 # first, updating the system
 sudo dnf update -y
