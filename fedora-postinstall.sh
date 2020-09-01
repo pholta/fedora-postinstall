@@ -15,13 +15,15 @@ sudo dnf install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstream
 # Libre office + Czech
 sudo dnf install libreoffice libreoffice-langpack-cs -y
 
-# M$ compatibility
+# Windows, DOS compatibility (mostly for gaming:)
 sudo dnf install wine dosbox -y
 
 # networkin stuff, VPN
 sudo dnf install -y NetworkManager-openvpn NetworkManager-openvpn-gnome
 
-# Third-party repositories 
+# for Oracle Forms Applications
+sudo dnf -y install icedtea-web
+
 # Google Chrome, PyCharm, Steam
 sudo dnf install fedora-workstation-repositories -y
 sudo dnf config-manager --set-enabled  google-chrome  
