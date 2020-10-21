@@ -16,26 +16,26 @@ sudo dnf install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstream
 sudo dnf install libreoffice libreoffice-langpack-cs -y
 
 # Windows, DOS compatibility (mostly for gaming:)
-sudo dnf install wine dosbox -y
+#sudo dnf install wine dosbox -y
 
 # networkin stuff, VPN
-sudo dnf install -y NetworkManager-openvpn NetworkManager-openvpn-gnome
+#sudo dnf install -y NetworkManager-openvpn NetworkManager-openvpn-gnome
 
 # for Oracle Forms Applications
-sudo dnf -y install icedtea-web
+#sudo dnf -y install icedtea-web
 
 # Google Chrome, PyCharm, Steam
 sudo dnf install fedora-workstation-repositories -y
 sudo dnf config-manager --set-enabled  google-chrome  
-sudo dnf config-manager --set-enabled  rpmfusion-nonfree-steam 
+#sudo dnf config-manager --set-enabled  rpmfusion-nonfree-steam 
 sudo dnf install google-chrome-stable -y
-sudo dnf install steam -y
+#sudo dnf install steam -y
 
-# Graphical stuff - Gimp (photo editor), Hugin (panoramic tool), Darktable (raw files processor)
-sudo dnf install gimp hugin darktable -y
+# Graphical stuff -Gimp (photo editor), Hugin (panoramic tool), Darktable (raw files processor)
+#sudo dnf install gimp hugin darktable -y
 
 #dropbox integration
-sudo dnf install dropbox -y
+#sudo dnf install dropbox -y
 
 # Gnome Tweak tool to customize advanced GNOME 3 options
 sudo dnf install gnome-tweak-tool -y
