@@ -43,11 +43,11 @@ sudo dnf install gnome-tweak-tool -y
 #Gnome Shell Tweaks
 #adding all buttons - minimize,maximize,close
 gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
-show seconds
+#show seconds
 gsettings set org.gnome.desktop.interface clock-show-seconds true
-show date
+#show date
 gsettings set org.gnome.desktop.interface clock-show-date true
 #show battery percentage
 gsettings set org.gnome.desktop.interface show-battery-percentage true
-show week number
+#show week number
 gsettings set org.gnome.desktop.calendar show-weekdate true
