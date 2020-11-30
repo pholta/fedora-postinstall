@@ -19,7 +19,7 @@ sudo dnf install libreoffice libreoffice-langpack-cs -y
 sudo dnf install wine dosbox -y
 
 # networkin stuff, VPN
-#sudo dnf install -y NetworkManager-openvpn NetworkManager-openvpn-gnome
+sudo dnf install -y NetworkManager-openvpn NetworkManager-openvpn-gnome
 
 # for Oracle Forms Applications
 sudo dnf -y install icedtea-web
