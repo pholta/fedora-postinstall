@@ -6,10 +6,13 @@
 # first, updating the system
 sudo dnf update -y
 
-# RPM Fusion repository - universal based on the distro version.. 
-sudo dnf install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
+# Enabling the RPM Fusion repositories (free + non-free)
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y;
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
 
 # Audio Video codecs + VLC
+sudo dnf group install multimedia -y
+
 sudo dnf install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer-ffmpeg gstreamer1-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer-plugins-base-tools gstreamer1-plugins-good-extras gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-good gstreamer1-plugins-base gstreamer1 vlc -y
 
 # Libre office + Czech
@@ -17,12 +20,6 @@ sudo dnf install libreoffice libreoffice-langpack-cs -y
 
 # Windows, DOS compatibility (mostly for gaming:)
 sudo dnf install wine dosbox -y
-
-# networkin stuff, VPN
-sudo dnf install -y NetworkManager-openvpn NetworkManager-openvpn-gnome
-
-# for Oracle Forms Applications
-sudo dnf -y install icedtea-web
 
 # Google Chrome, PyCharm, Steam
 sudo dnf install fedora-workstation-repositories -y
